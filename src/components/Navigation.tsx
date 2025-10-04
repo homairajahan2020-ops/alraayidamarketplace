@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Search, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   return (
@@ -7,28 +8,30 @@ const Navigation = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-8">
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              alraayida
-            </h1>
+            <Link to="/">
+              <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent cursor-pointer hover:opacity-80 transition-opacity">
+                alraayida
+              </h1>
+            </Link>
             <div className="hidden md:flex gap-6">
-              <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <Link to="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Browse Gigs
-              </a>
-              <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              </Link>
+              <Link to="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 How It Works
-              </a>
-              <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              </Link>
+              <Link to="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Become a Seller
-              </a>
+              </Link>
             </div>
           </div>
           
           <div className="flex items-center gap-4">
-            <Button variant="ghost" size="sm" className="hidden md:flex">
-              Sign In
+            <Button variant="ghost" size="sm" className="hidden md:flex" asChild>
+              <Link to="/">Sign In</Link>
             </Button>
-            <Button size="sm" className="bg-primary hover:bg-primary/90">
-              Join Now
+            <Button size="sm" className="bg-primary hover:bg-primary/90" asChild>
+              <Link to="/">Join Now</Link>
             </Button>
             <Button variant="ghost" size="icon" className="md:hidden">
               <Menu className="h-5 w-5" />
