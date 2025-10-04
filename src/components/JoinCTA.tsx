@@ -12,7 +12,7 @@ const features = [
 
 const JoinCTA = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-primary to-secondary text-primary-foreground">
+    <section id="join-cta" className="py-20 bg-gradient-to-br from-primary to-secondary text-primary-foreground">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           <div>
